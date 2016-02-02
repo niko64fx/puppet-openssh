@@ -10,7 +10,7 @@ class ssh::authorized_keys (
   $defaults = {
     ensure => present,
     user   => 'root',
-    #type   => 'ssh-rsa',
+    'type' => 'ssh-rsa',
     noop   => $brsnoop,
   }
 
