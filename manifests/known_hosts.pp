@@ -1,7 +1,7 @@
 class ssh::known_hosts (
   $export_known_hosts  = $ssh::export_known_hosts,
   $realize_known_hosts = $ssh::realize_known_hosts,
-  $brsnoop             = $ssh::brsnoop,
+  $if_noop             = $ssh::if_noop,
 ) {
 
   if $export_known_hosts {
@@ -14,7 +14,7 @@ class ssh::known_hosts (
 
   if $realize_known_hosts {
     Sshkey <<| |>> {
-      noop => $brsnoop,
+      noop => $if_noop,
     }
   }
 

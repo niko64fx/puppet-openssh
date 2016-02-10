@@ -44,7 +44,6 @@ ssh::authorized_keys:
   'toto':
     type: 'ssh-rsa'
     key: 'AAAAB3NzaC1yc2EAAAADAQladlFfe+6f0qGILC2rvgVyVoswwQCK4Egvdj6AyuXdLl+WSYq5nZMedqmPdCV2SQh/6lBKHALmcUgvEkCMbO4tteIovfZKp89zuF8qROYmUBMF3ksSm3YEDSH3tyTXGDjb1YvnNXT50KjxWs4e55cy2aFAJOiBPxej3r+IHmjntPzOx5HWm3AnpiMSHqBCZ6T96THauFvQ+iAqOnSypwiObIYmVkzoylRXXcOpx9G0/1uaCEg+wUELIu0l9AICNZrWawLCwvECidcKx+Qh+BhlY7KtBZvv1krMcycBkQQENfHzopf7raGgmsCcDYyDVEHcx'
-    user: 'root'
 ```
 As you can see, the key is `ssh-rsa` type.
 

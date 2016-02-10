@@ -11,7 +11,7 @@ class ssh (
   $authorized_keys          = undef,
   $export_known_hosts       = true,
   $realize_known_hosts      = true,
-  $brsnoop                  = $::clientnoop,
+  $if_noop                  = $::clientnoop,
 ) {
 
   class{'::ssh::install': } ->

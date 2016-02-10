@@ -3,14 +3,14 @@ class ssh::config (
   $tcpforwarding     = $ssh::config_tcpforwarding,
   $printmotd         = $ssh::config_printmotd,
   $printlastlog      = $ssh::config_printlastlog,
-  $brsnoop           = $ssh::brsnoop,
+  $if_noop           = $ssh::if_noop,
 ) {
 
   file { '/etc/ssh/sshd_config':
     owner => root,
     group => root,
     mode  => '0600',
-    noop  => $brsnoop,
+    noop  => $if_noop,
   }
 
   augeas { 'sshd_config':
@@ -21,7 +21,7 @@ class ssh::config (
       "set PrintMotd ${printmotd}",
       "set PrintLastLog ${printlastlog}",
       ],
-    noop    => $brsnoop,
+    noop    => $if_noop,
   }
 
 }
