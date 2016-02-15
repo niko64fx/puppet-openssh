@@ -1,7 +1,7 @@
-class ssh::install (
-  $package_name   = $ssh::package_name,
-  $package_ensure = $ssh::package_ensure,
-  $if_noop        = $ssh::if_noop,
+class openssh::install (
+  $package_name   = $openssh::package_name,
+  $package_ensure = $openssh::package_ensure,
+  $if_noop        = $openssh::if_noop,
 ) {
 
   package { $package_name:

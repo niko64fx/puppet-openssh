@@ -1,6 +1,6 @@
-class ssh::authorized_keys (
-  $authorized_keys = $ssh::authorized_keys,
-  $if_noop         = $ssh::if_noop,
+class openssh::authorized_keys (
+  $authorized_keys = $openssh::authorized_keys,
+  $if_noop         = $openssh::if_noop,
 ) {
 
   if $authorized_keys {
@@ -14,6 +14,6 @@ class ssh::authorized_keys (
     noop   => $if_noop,
   }
 
-  create_resources(ssh_authorized_key, hiera_hash('ssh::authorized_keys'), $defaults)
+  create_resources(ssh_authorized_key, hiera_hash('openssh::authorized_keys'), $defaults)
   
 }

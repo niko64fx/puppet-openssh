@@ -1,7 +1,7 @@
-class ssh::known_hosts (
-  $export_known_hosts  = $ssh::export_known_hosts,
-  $realize_known_hosts = $ssh::realize_known_hosts,
-  $if_noop             = $ssh::if_noop,
+class openssh::known_hosts (
+  $export_known_hosts  = $openssh::export_known_hosts,
+  $realize_known_hosts = $openssh::realize_known_hosts,
+  $if_noop             = $openssh::if_noop,
 ) {
 
   if $export_known_hosts {
