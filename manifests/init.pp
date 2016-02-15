@@ -1,4 +1,4 @@
-class ssh (
+class openssh (
   $package_ensure           = installed,
   $package_name             = 'openssh-server',
   $config_permit_root_login = 'yes',
@@ -14,9 +14,9 @@ class ssh (
   $if_noop                  = $::clientnoop,
 ) {
 
-  class{'::ssh::install': } ->
-  class{'::ssh::config': }  ~>
-  class{'::ssh::service': } ->
-  Class['ssh']
+  class{'::openssh::install': } ->
+  class{'::openssh::config': }  ~>
+  class{'::openssh::service': } ->
+  Class['openssh']
 
 }

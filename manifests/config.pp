@@ -1,9 +1,9 @@
-class ssh::config (
-  $permit_root_login = $ssh::config_permit_root_login,
-  $tcpforwarding     = $ssh::config_tcpforwarding,
-  $printmotd         = $ssh::config_printmotd,
-  $printlastlog      = $ssh::config_printlastlog,
-  $if_noop           = $ssh::if_noop,
+class openssh::config (
+  $permit_root_login = $openssh::config_permit_root_login,
+  $tcpforwarding     = $openssh::config_tcpforwarding,
+  $printmotd         = $openssh::config_printmotd,
+  $printlastlog      = $openssh::config_printlastlog,
+  $if_noop           = $openssh::if_noop,
 ) {
 
   file { '/etc/ssh/sshd_config':

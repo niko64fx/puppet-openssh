@@ -1,8 +1,8 @@
-class ssh::service (
-  $service_name    = $ssh::service_name,
-  $service_ensure  = $ssh::service_ensure,
-  $service_enabled = $ssh::service_enabled,
-  $if_noop         = $ssh::if_noop,
+class openssh::service (
+  $service_name    = $openssh::service_name,
+  $service_ensure  = $openssh::service_ensure,
+  $service_enabled = $openssh::service_enabled,
+  $if_noop         = $openssh::if_noop,
 ) {
 
   service { $service_name:
